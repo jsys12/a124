@@ -1,0 +1,53 @@
+/* Общие стили */
+body {
+    background-color: #add8e6; /* Светло-голубой цвет */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px; /* Уменьшение размера заголовка на мобильных */
+    }
+
+    section {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    input[type="text"], button {
+        width: 100%; /* Кнопки и поля ввода занимают всю ширину экрана */
+        font-size: 16px; /* Увеличение размера шрифта для удобства */
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 12px; /* Уменьшение текста в футере */
+    }
+}
