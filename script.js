@@ -1,7 +1,7 @@
 // script.js
 
 // Имитируем базу данных имен
-const validUsernames = ['Роман', 'Рома', 'Стас', 'Сус', 'Станисла', 'Станислав', 'Станислау', 'Саня', 'Александр', 'Саша', 'Егор', 'Уегорп', 'Матвей', 'Матрасик', 'Матрас', 'Стасик',];
+const validUsernames = ['роман', 'рома', 'стас', 'сус', 'станисла', 'станислав', 'станислау', 'саня', 'александр', 'саша', 'егор', 'уегорп', 'матвей', 'матрасик', 'матрас', 'стасик'];
 
 // Функция для проверки имени и отображения приветственного сообщения
 function handleFormSubmit(event) {
@@ -9,14 +9,14 @@ function handleFormSubmit(event) {
 
     // Получаем значение из поля ввода
     const usernameInput = document.getElementById('username');
-    const username = usernameInput.value.trim();
+    const username = usernameInput.value.trim().toLowerCase();
 
     // Получаем элемент для отображения сообщения
     const greeting = document.getElementById('greeting');
 
     // Проверяем, есть ли имя в "базе данных"
     if (validUsernames.includes(username)) {
-        greeting.textContent = `Привет, ${username}! 
+        greeting.textContent = `Привет, ${username.toUpperCase()}! 
 Ты приглашён на мой день рождения, который, скорее всего, пройдёт 22 августа. Будем рубиться в пейнтбол! Если что-то изменится, я сообщу. Надеюсь, ты сможешь присоединиться! Дай знать, если будешь.
 С уважением, Всеволод.`;
     } else {
