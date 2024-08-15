@@ -24,6 +24,7 @@ const usernameMapping = {
 };
 
 // Функция для проверки имени и отображения приветственного сообщения
+// Функция для проверки имени и отображения приветственного сообщения
 function handleFormSubmit(event) {
     event.preventDefault(); // Отменяет стандартное действие формы
 
@@ -47,6 +48,7 @@ function handleFormSubmit(event) {
     }
 }
 
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -55,7 +57,7 @@ function printResultText(name) {
     const resultName = capitalizeFirstLetter(name);
     const greeting = document.getElementById('greeting');
     greeting.textContent = `Привет, ${resultName}! 
-Ты приглашён на мой день рождения, который, скорее всего, пройдёт 22 августа. Будем рубиться в пейнтбол! Если что-то изменится, я сообщу. Надеюсь, ты сможешь присоединиться! Дай знать, если будешь. Не забудь зайти в чат, кнопка снизу.
+Ты приглашён на мой день рождения, который, скорее всего, пройдёт 22 августа. Будем рубиться в пейнтбол! Если что-то изменится, я сообщу. Надеюсь, ты сможешь присоединиться! Дай знать, если будешь.
 С уважением, Всеволод.`;
 }
 
