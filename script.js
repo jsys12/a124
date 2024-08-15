@@ -1,7 +1,5 @@
-// script.js
-
 // Имитируем базу данных имен
-const validUsernames = ['роман', 'рома', 'стас', 'сус', 'станисла', 'станислав', 'станислау', 'саня', 'александр', 'саша', 'егор', 'уегорп', 'матвей', 'матрасик', 'матрас', 'стасик',  'сас',  'черт',  'чёрт',];
+const validUsernames = ['роман', 'рома', 'стас', 'сус', 'станисла', 'станислав', 'станислау', 'саня', 'александр', 'саша', 'егор', 'уегорп', 'матвей', 'матрасик', 'матрас', 'стасик', 'сас', 'черт', 'чёрт'];
 
 const usernameMapping = {
     'сус': 'Станислав',
@@ -33,19 +31,20 @@ function handleFormSubmit(event) {
     const usernameInput = document.getElementById('username');
     const username = usernameInput.value.trim().toLowerCase();
 
-    // Получаем элемент для отображения сообщения
+    // Получаем элемент для отображения сообщения и GIF
     const greeting = document.getElementById('greeting');
+    const gifContainer = document.getElementById('gifContainer');
 
     // Проверяем, есть ли имя в "базе данных"
-    
     if (validUsernames.includes(username)) {
         if (usernameMapping[username]) {
             printResultText(usernameMapping[username]);
+            gifContainer.style.display = 'block'; // Показываем GIF
         }
     } else {
         greeting.textContent = 'Имя не найдено в базе данных.';
+        gifContainer.style.display = 'none'; // Скрываем GIF
     }
-    
 }
 
 function capitalizeFirstLetter(string) {
@@ -53,8 +52,9 @@ function capitalizeFirstLetter(string) {
 }
 
 function printResultText(name) {
-    ResultName = capitalizeFirstLetter(name)
-    greeting.textContent = `Привет, ${ResultName}! 
+    const resultName = capitalizeFirstLetter(name);
+    const greeting = document.getElementById('greeting');
+    greeting.textContent = `Привет, ${resultName}! 
 Ты приглашён на мой день рождения, который, скорее всего, пройдёт 22 августа. Будем рубиться в пейнтбол! Если что-то изменится, я сообщу. Надеюсь, ты сможешь присоединиться! Дай знать, если будешь.
 С уважением, Всеволод.`;
 }
