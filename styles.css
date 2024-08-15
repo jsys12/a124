@@ -9,6 +9,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Используем flexbox для создания липкого футера */
 }
 
 header {
@@ -22,6 +25,8 @@ section {
     padding: 10px;
     margin: 10px;
     text-align: center;
+    width: auto;
+    flex: 1; /* Это заставит основное содержимое растягиваться */
 }
 
 footer {
@@ -29,42 +34,24 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #ffffff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: top; /* Это заставит футер оставаться внизу */
 }
 
-/* Центрирование GIF */
-div.image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    background-color: #fff;
-    z-index: 999999;
+#gifContainer {
+    display: none;
     text-align: center;
+    margin-top: 20px;
 }
-.image-holder {
-    position:absolute;
-    left: 50%;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-}
-.image-holder img
-{
+
+#gifContainer img {
     width: 100%;
-    margin-left: -50%;
-    margin-top: -50%;
+    max-width: 400px;
 }
 
 /* Адаптация под мобильные устройства */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 24px; /* Уменьшение размера заголовка на мобильных */
+        font-size: 24px;
     }
 
     section {
@@ -73,12 +60,12 @@ div.image-container {
     }
 
     input[type="text"], button {
-        width: 100%; /* Кнопки и поля ввода занимают всю ширину экрана */
-        font-size: 16px; /* Увеличение размера шрифта для удобства */
+        width: 100%;
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
     footer p {
-        font-size: 12px; /* Уменьшение текста в футере */
+        font-size: 12px;
     }
 }
