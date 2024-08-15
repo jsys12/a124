@@ -76,6 +76,11 @@ function openLink2() {
     window.open('https://t.me/+jAJPwVO1TwQ3ZmYy', '_blank'); // Открывает ссылку в новой вкладке
 }
 
+function fackeButton() {
+    alert('Эт шутка')
+}
+
 // Назначаем обработчик события для кнопки
 document.getElementById('openLinkButton').addEventListener('click', openLink);
 document.getElementById('openLinkButton2').addEventListener('click', openLink2);
+document.getElementById('fackeButton').addEventListener('click', fackeButton);
