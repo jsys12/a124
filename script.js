@@ -18,27 +18,30 @@ const usernameMapping = {
     'чот': 'Станислав',
     'роман': 'Роман',
     'рома': 'Роман',
-    'александр': 'александр',
-    'саня': 'александр',
-    'саша': 'александр',
-    'егор': 'егор',
-    'уегорп': 'егор',
+    'александр': 'Александр',
+    'саня': 'Александр',
+    'саша': 'Александр',
+    'егор': 'Егор',
+    'уегорп': 'Егор',
     'матвей': 'Матвей',
-    'Даниил': 'Даниил(пиво)',
-    'Иван': 'Иван',
-    'Ваня': 'Ваня',
-    'Данил': 'Данил',
-    'Даня': 'Даня'
+    'даниил': 'Даниил(пиво)',
+    'иван': 'Иван',
+    'ваня': 'Ваня',
+    'данил': 'Данил',
+    'даня': 'Даня'
 };
 
-// Функция для проверки имени и отображения приветственного сообщения
 // Функция для проверки имени и отображения приветственного сообщения
 function handleFormSubmit(event) {
     event.preventDefault(); // Отменяет стандартное действие формы
 
+    console.log("Форма отправлена"); // Отладочное сообщение
+
     // Получаем значение из поля ввода
     const usernameInput = document.getElementById('username');
     const username = usernameInput.value.trim().toLowerCase();
+
+    console.log("Введенное имя: " + username); // Отладочное сообщение
 
     // Получаем элемент для отображения сообщения и GIF
     const greeting = document.getElementById('greeting');
@@ -46,9 +49,12 @@ function handleFormSubmit(event) {
 
     // Проверяем, есть ли имя в "базе данных"
     if (validUsernames.includes(username)) {
-        if (usernameMapping[username]) {
-            printResultText(usernameMapping[username]);
+        const mappedName = usernameMapping[username];
+        if (mappedName) {
+            printResultText(mappedName);
             gifContainer.style.display = 'block'; // Показываем GIF
+        } else {
+            console.error("Имя найдено в базе данных, но не найдено в usernameMapping.");
         }
     } else {
         greeting.textContent = 'Имя не найдено в базе данных.';
@@ -82,10 +88,10 @@ function openLink2() {
 }
 
 function fackeButton() {
-    alert('Эт шутка')
+    alert('Эт шутка');
 }
 
-// Назначаем обработчик события для кнопки
+// Назначаем обработчик события для кнопок
 document.getElementById('openLinkButton').addEventListener('click', openLink);
 document.getElementById('openLinkButton2').addEventListener('click', openLink2);
 document.getElementById('fackeButton').addEventListener('click', fackeButton);
