@@ -1,0 +1,11 @@
+{
+  "name": "bastion-jstest",
+  "private": true,
+  "description": "Headless Chromium tests for the Bastion content runtime (scriptlets, cosmetic and procedural filters, picker).",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

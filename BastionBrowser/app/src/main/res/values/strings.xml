@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bastion</string>
+    <string name="open">Открыть</string>
+    <string name="cancel">Отмена</string>
+    <string name="allow">Разрешить</string>
+    <string name="deny">Запретить</string>
+    <string name="copied">Скопировано</string>
+    <string name="downloads">Загрузки</string>
+
+    <string name="app_redirect_blocked">Заблокирован переход в приложение</string>
+    <string name="open_store_title">Открыть магазин приложений?</string>
+    <string name="open_store_message">Для этой ссылки нужно приложение, которое не установлено.</string>
+    <string name="no_app_for_link">Нет приложения для этой ссылки</string>
+    <string name="external_app">внешнее приложение</string>
+    <string name="open_app_title">Открыть «%1$s»?</string>
+    <string name="open_app_message">Сайт хочет открыть внешнее приложение.</string>
+
+    <string name="popup_blocked">Всплывающее окно заблокировано</string>
+    <string name="popup_ad_blocked">Заблокирована реклама во всплывающем окне</string>
+
+    <string name="ssl_title">Небезопасное соединение</string>
+    <string name="ssl_message">Сертификат сайта %1$s не прошёл проверку: %2$s. Злоумышленники могут перехватить ваши данные.</string>
+    <string name="ssl_expired">срок действия истёк</string>
+    <string name="ssl_mismatch">выдан для другого сайта</string>
+    <string name="ssl_untrusted">выдан недоверенным центром</string>
+    <string name="ssl_not_yet_valid">ещё не действителен</string>
+    <string name="ssl_invalid">недействителен</string>
+    <string name="ssl_proceed">Всё равно открыть</string>
+    <string name="ssl_back">Назад в безопасность</string>
+
+    <string name="renderer_crashed">Страница перезагружена после сбоя</string>
+
+    <string name="perm_title">Запрос от %1$s</string>
+    <string name="perm_message">Сайт запрашивает доступ: %1$s</string>
+    <string name="perm_camera">камера</string>
+    <string name="perm_microphone">микрофон</string>
+    <string name="perm_location">местоположение</string>
+
+    <string name="download_started">Загрузка: %1$s</string>
+    <string name="download_saved">Сохранено в «Загрузки»: %1$s</string>
+    <string name="download_failed">Не удалось сохранить файл</string>
+
+    <string name="shortcut_unsupported">Лаунчер не поддерживает ярлыки</string>
+    <string name="bookmark_added">Добавлено в закладки</string>
+    <string name="bookmark_removed">Удалено из закладок</string>
+    <string name="picker_done">Элемент скрыт. Правило добавлено в «Мои правила»</string>
+</resources>
