@@ -123,6 +123,7 @@ android {
             test.maxHeapSize = "3g"
             // Optional Maven mirror for Robolectric's android-all jars: -ProbolectricRepo=https://...
             project.findProperty("robolectricRepo")?.let { test.systemProperty("robolectric.dependency.repo.url", it.toString()) }
+            project.findProperty("screenshotDir")?.let { test.systemProperty("screenshotDir", it.toString()) }
         }
     }
 }

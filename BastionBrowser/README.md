@@ -69,6 +69,7 @@ cd BastionBrowser
 ./gradlew :adblock:test                                # движок фильтров
 ./gradlew :adblock:test -PlistsDir=/путь/к/спискам      # + компиляция и проверки на реальных списках
 ./gradlew :app:testDebugUnitTest                       # smoke-тесты UI на Robolectric
+./gradlew :app:testDebugUnitTest -PscreenshotDir=/tmp/shots   # + PNG-снимки экранов
 cd tools/jstest && npm install && node test.js         # скриптлеты/косметика/пипетка в headless Chromium
 ```
 

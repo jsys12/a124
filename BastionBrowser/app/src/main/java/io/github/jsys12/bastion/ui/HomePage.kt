@@ -197,10 +197,11 @@ private fun StatsCard(c: BrowserController) {
 
 @Composable
 private fun StatChip(value: String, label: String, modifier: Modifier) {
-    Surface(color = MaterialTheme.colorScheme.surface.copy(alpha = 0.55f), shape = RoundedCornerShape(16.dp), modifier = modifier) {
+    val onContainer = MaterialTheme.colorScheme.onPrimaryContainer
+    Surface(color = onContainer.copy(alpha = 0.08f), shape = RoundedCornerShape(16.dp), modifier = modifier) {
         Column(Modifier.padding(horizontal = 12.dp, vertical = 10.dp)) {
-            Text(value, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text(label, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(value, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis, color = onContainer)
+            Text(label, style = MaterialTheme.typography.labelSmall, color = onContainer.copy(alpha = 0.7f))
         }
     }
 }
